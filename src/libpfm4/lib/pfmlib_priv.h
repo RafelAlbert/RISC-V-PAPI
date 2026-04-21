@@ -21,6 +21,11 @@
  */
 
 /*
+ * Copyright (c) 2026 BSC
+ * Contributed by Rafel Albert Bros Esqueu <rafel.brosesqueu@bsc.es>
+*/
+
+/*
  * Copyright (c) 2002-2006 Hewlett-Packard Development Company, L.P.
  * Contributed by Stephane Eranian <eranian@hpl.hp.com>
  *
@@ -769,6 +774,10 @@ extern pfmlib_pmu_t riscv_epi_epac_avispado_support;
 extern pfmlib_pmu_t riscv_eupilot_vec_atrevido_support;
 extern pfmlib_pmu_t riscv_spacemit_k1_8_support;
 extern pfmlib_pmu_t riscv_openhwgroup_cva6_support;
+extern pfmlib_pmu_t riscv_eupilot_l2hn0_support;
+extern pfmlib_pmu_t riscv_eupilot_l2hn1_support;
+extern pfmlib_pmu_t riscv_eupilot_l2hn2_support;
+extern pfmlib_pmu_t riscv_eupilot_l2hn3_support;
 
 extern pfmlib_os_t *pfmlib_os;
 extern pfmlib_os_t pfmlib_os_perf;

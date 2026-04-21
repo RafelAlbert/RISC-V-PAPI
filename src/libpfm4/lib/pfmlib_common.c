@@ -21,6 +21,11 @@
  */
 
 /*
+ * Copyright (c) 2026 BSC
+ * Contributed by Rafel Albert Bros Esqueu <rafel.brosesqueu@bsc.es>
+*/
+
+/*
  * pfmlib_common.c: set of functions common to all PMU models
  *
  * Copyright (c) 2009 Google, Inc
@@ -676,6 +681,10 @@ static pfmlib_pmu_t *pfmlib_pmus[]=
 	&riscv_eupilot_vec_atrevido_support,
 	&riscv_spacemit_k1_8_support,
 	&riscv_openhwgroup_cva6_support,
+	&riscv_eupilot_l2hn0_support,
+	&riscv_eupilot_l2hn1_support,
+	&riscv_eupilot_l2hn2_support,
+	&riscv_eupilot_l2hn3_support,
 #endif
 
 #ifdef __linux__

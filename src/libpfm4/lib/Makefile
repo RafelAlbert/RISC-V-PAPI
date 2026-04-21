@@ -21,6 +21,11 @@
 #
 
 #
+# Copyright (c) 2026 BSC
+# Contributed by Rafel Albert Bros Esqueu <rafel.brosesqueu@bsc.es>
+#
+
+#
 # Copyright (c) 2002-2006 Hewlett-Packard Development Company, L.P.
 # Contributed by Stephane Eranian <eranian@hpl.hp.com>
 #
@@ -255,7 +260,8 @@ SRCS += pfmlib_riscv.c \
         pfmlib_riscv_epi_epac_avispado.c \
         pfmlib_riscv_eupilot_vec_atrevido.c \
         pfmlib_riscv_spacemit_k1_8.c \
-        pfmlib_riscv_openhwgroup_cva6.c
+        pfmlib_riscv_openhwgroup_cva6.c \
+        pfmlib_riscv_eupilot_l2hn.c
 CFLAGS += -DCONFIG_PFMLIB_ARCH_RISCV
 endif
 
@@ -445,7 +451,8 @@ INC_RISCV=pfmlib_riscv_priv.h \
   events/riscv_epi_epac_avispado_events.h \
   events/riscv_eupilot_vec_atrevido_events.h \
   events/riscv_spacemit_k1_8_events.h \
-  events/riscv_openhwgroup_cva6_events.h
+  events/riscv_openhwgroup_cva6_events.h \
+  events/riscv_eupilot_l2hn_events.h
 
 INCDEP=$(INC_COMMON) $(INCARCH)
 
