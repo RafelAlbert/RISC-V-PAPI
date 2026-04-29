@@ -45,7 +45,8 @@ typedef enum {
     EPI_EPAC_AVISPADO,    // EPI EPAC Avispado+VPU
     EUPILOT_VEC_ATREVIDO, // EUPILOT VEC Atrevido+VPU
     SPACEMIT_K1_8,         // SpacemiT K1 8
-    OPENHWGROUP_CVA6 // OpenHWGroup CVA6
+    OPENHWGROUP_CVA6, // OpenHWGroup CVA6
+    BSC_ZETTA_TC2, // BSC BZL Zetta TC2 (Lagarto Ox)
 } pfm_riscv_implementation_t;
 
 typedef struct {

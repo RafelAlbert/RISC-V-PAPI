@@ -2437,3 +2437,11 @@ PRESET,PAPI_L1_DCA,NOT_DERIVED,l1d_access
 PRESET,PAPI_L2_TCA,NOT_DERIVED,l2_access
 #
 PRESET,PAPI_TOT_IIS,NOT_DERIVED,issued_inst
+
+#####################
+# RISC-V BZL Zetta TC2 (Lagarto Ox) #
+#####################
+CPU,riscv_bsc_zetta_tc2
+#
+PRESET,PAPI_TOT_INS,NOT_DERIVED,INSTRUCTIONS
+PRESET,PAPI_TOT_CYC,NOT_DERIVED,CYCLES
