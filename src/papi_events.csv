@@ -2458,3 +2458,24 @@ PRESET,PAPI_TLB_DM,NOT_DERIVED,dtlb_miss
 PRESET,PAPI_TLB_TL,DERIVED_ADD,itlb_miss,dtlb_miss
 # Branch group
 PRESET,PAPI_BR_MSP,DERIVED_ADD,cond_br_recovery,uncond_br_recovery
+
+#####################
+# RISC-V BSC Komodo (Lagarto Ox + VPU) #
+#####################
+CPU,riscv_bsc_komodo
+#
+PRESET,PAPI_TOT_INS,NOT_DERIVED,INSTRUCTIONS
+PRESET,PAPI_TOT_CYC,NOT_DERIVED,CYCLES
+# Cache group
+PRESET,PAPI_L1_ICA,NOT_DERIVED,icache_req
+PRESET,PAPI_L1_ICM,NOT_DERIVED,icache_misses
+PRESET,PAPI_L1_DCR,NOT_DERIVED,dcache_read_req
+PRESET,PAPI_L1_DCW,NOT_DERIVED,dcache_write_req
+PRESET,PAPI_L2_TCA,NOT_DERIVED,l2_accesses
+PRESET,PAPI_L2_TCM,NOT_DERIVED,l2_misses
+# TLB group
+PRESET,PAPI_TLB_IM,NOT_DERIVED,itlb_miss
+PRESET,PAPI_TLB_DM,NOT_DERIVED,dtlb_miss
+PRESET,PAPI_TLB_TL,DERIVED_ADD,itlb_miss,dtlb_miss
+# Branch group
+PRESET,PAPI_BR_MSP,DERIVED_ADD,cond_br_recovery,uncond_br_recovery
