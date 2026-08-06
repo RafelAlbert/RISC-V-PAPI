@@ -669,6 +669,8 @@ typedef enum {
 	PFM_PMU_RISCV_EUPILOT_VEC_ATREVIDO, /* EUPILOT VEC Atrevido+VPU */
 	PFM_PMU_RISCV_SPACEMIT_K1_8,        /* SpacemiT K1 8 */
 	PFM_PMU_RISCV_OPENHWGROUP_CVA6,     /* OpenHardware Group CVA6 */
+  PFM_PMU_RISCV_BSC_ZETTA_TC2,        /* BSC BZL Zetta TC2 (Lagarto Ox) */
+  PFM_PMU_RISCV_BSC_KOMODO,           /* BSC Komodo (Lagarto Ox + VPU) */
 	PFM_PMU_RISCV_EUPILOT_L2HN0,        /* EUPILOT L2 Cache Monitor 0 */
 	PFM_PMU_RISCV_EUPILOT_L2HN1,        /* EUPILOT L2 Cache Monitor 1 */
 	PFM_PMU_RISCV_EUPILOT_L2HN2,        /* EUPILOT L2 Cache Monitor 2 */

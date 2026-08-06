@@ -33,6 +33,8 @@
 #include "events/riscv_epi_epac_avispado_events.h" /* EPI Avispado event tables */
 #include "events/riscv_eupilot_vec_atrevido_events.h" /* EUPILOT Atrevido event tables */
 #include "events/riscv_openhwgroup_cva6_events.h" /* Openhwgroup CVA6 event tables */
+#include "events/riscv_bsc_zetta_tc2_events.h" /* BSC BZL Zetta TC2 (Lagarto Ox) event tables */
+#include "events/riscv_bsc_komodo_events.h" /* BSC Komodo (Lagarto Ox + VPU) event tables */
 
 pfm_riscv_config_t pfm_riscv_cfg;
 
@@ -133,6 +135,16 @@ int pfm_riscv_detect(void *this)
     else if (strcmp(buffer, "eupilot,atrevido") == 0)
     {
         pfm_riscv_cfg.implementation = EUPILOT_VEC_ATREVIDO;
+        return PFM_SUCCESS;
+    }
+    else if (strcmp(buffer, "bsc, lox-gaudi") == 0)
+    {
+        pfm_riscv_cfg.implementation = BSC_ZETTA_TC2;
+        return PFM_SUCCESS;
+    }
+    else if (strcmp(buffer, "bsc, lox") == 0)
+    {
+        pfm_riscv_cfg.implementation = BSC_KOMODO;
         return PFM_SUCCESS;
     }
 

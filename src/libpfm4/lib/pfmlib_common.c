@@ -681,6 +681,8 @@ static pfmlib_pmu_t *pfmlib_pmus[]=
 	&riscv_eupilot_vec_atrevido_support,
 	&riscv_spacemit_k1_8_support,
 	&riscv_openhwgroup_cva6_support,
+  &riscv_bsc_zetta_tc2_support,
+  &riscv_bsc_komodo_support,
 	&riscv_eupilot_l2hn0_support,
 	&riscv_eupilot_l2hn1_support,
 	&riscv_eupilot_l2hn2_support,

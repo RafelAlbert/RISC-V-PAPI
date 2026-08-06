@@ -170,6 +170,8 @@ decode_vendor_string( char *s, int *vendor )
 		*vendor = PAPI_VENDOR_RISCV_SPACEMIT;
 	else if ( strcasecmp( s, "RISCV_OPENHWGROUP" ) == 0)
 		*vendor = PAPI_VENDOR_RISCV_OPENHWGROUP;
+	else if ( strcasecmp( s, "RISCV_BSC" ) == 0)
+		*vendor = PAPI_VENDOR_RISCV_BSC;
 	else
 		*vendor = PAPI_VENDOR_UNKNOWN;
 
@@ -512,6 +514,8 @@ _linux_get_cpu_info( PAPI_hw_info_t *hwinfo, int *cpuinfo_mhz )
 									strcpy(hwinfo->vendor_string, "RISCV_EUPILOT");
 								else if ((strcasecmp(v, "openhwgroup") == 0))
 									strcpy(hwinfo->vendor_string, "RISCV_OPENHWGROUP");
+								else if ((strcasecmp(v, "bsc") == 0))
+									strcpy(hwinfo->vendor_string, "RISCV_BSC");
 							}
 						}
 						else {
