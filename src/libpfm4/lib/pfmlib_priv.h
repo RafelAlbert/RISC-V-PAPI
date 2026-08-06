@@ -773,6 +773,7 @@ extern pfmlib_pmu_t riscv_sophon_sg2042_support;
 extern pfmlib_pmu_t riscv_epi_epac_avispado_support;
 extern pfmlib_pmu_t riscv_eupilot_vec_atrevido_support;
 extern pfmlib_pmu_t riscv_spacemit_k1_8_support;
+extern pfmlib_pmu_t riscv_spacemit_k3_support;
 extern pfmlib_pmu_t riscv_openhwgroup_cva6_support;
 extern pfmlib_pmu_t riscv_bsc_zetta_tc2_support;
 extern pfmlib_pmu_t riscv_bsc_komodo_support;

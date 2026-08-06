@@ -2440,6 +2440,36 @@ PRESET,PAPI_L2_TCA,NOT_DERIVED,l2_access
 PRESET,PAPI_TOT_IIS,NOT_DERIVED,issued_inst
 
 #####################
+# SpacemiT K3 #
+#####################
+# The K3 (X100 + A100 cores) shares the K1 event encoding, so
+# these presets mirror the SpacemiT K1 8 section above:
+CPU,riscv_spacemit_k3
+#
+PRESET,PAPI_TOT_INS,NOT_DERIVED,INSTRUCTIONS
+PRESET,PAPI_TOT_CYC,NOT_DERIVED,CYCLES
+PRESET,PAPI_INT_INS,DERIVED_POSTFIX,N0|N1|2|*|3|/|-|,alu_inst,mult_inst
+#
+PRESET,PAPI_FP_INS,NOT_DERIVED,fp_inst
+PRESET,PAPI_FP_OPS,DERIVED_SUB,fp_inst,fp_load_inst,fp_store_inst
+PRESET,PAPI_SR_INS,NOT_DERIVED,store_inst
+PRESET,PAPI_LD_INS,NOT_DERIVED,load_inst
+PRESET,PAPI_VEC_INS,NOT_DERIVED,vector_inst
+#
+PRESET,PAPI_BR_CN,NOT_DERIVED,cond_br_inst
+PRESET,PAPI_BR_MSP,NOT_DERIVED,cond_br_mispred
+PRESET,PAPI_BR_INS,NOT_DERIVED,br_inst
+PRESET,PAPI_BR_UCN,NOT_DERIVED,uncond_br_inst
+PRESET,PAPI_BR_TKN,NOT_DERIVED,taken_cond_br_inst
+#
+PRESET,PAPI_TLB_IM,NOT_DERIVED,itlb_load_miss
+PRESET,PAPI_TLB_DM,DERIVED_ADD,dtlb_load_miss,dtlb_store_miss
+PRESET,PAPI_L1_DCA,NOT_DERIVED,l1d_access
+PRESET,PAPI_L2_TCA,NOT_DERIVED,l2_access
+#
+PRESET,PAPI_TOT_IIS,NOT_DERIVED,issued_inst
+
+#####################
 # RISC-V BZL Zetta TC2 (Lagarto Ox) #
 #####################
 CPU,riscv_bsc_zetta_tc2
