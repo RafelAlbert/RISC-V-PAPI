@@ -20,10 +20,39 @@
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+/*
+ * Copyright (c) 2026 BSC
+ * Contributed by Rafel Albert Bros Esqueu <rafel.brosesqueu@bsc.es>
+*/
+
 /* private headers */
 #include "pfmlib_priv.h" /* library private */
 #include "pfmlib_riscv_priv.h"
 #include "pfmlib_perf_event_priv.h"
+
+#include <limits.h>
+#include <stdio.h>
+
+static int find_pmu_type_by_name(const char *name)
+{
+    char filename[PATH_MAX];
+    FILE *fp;
+    int ret, type;
+
+    if (!name) return PFM_ERR_NOTSUPP;
+
+    sprintf(filename, "/sys/bus/event_source/devices/%s/type", name);
+
+    fp = fopen(filename, "r");
+    if (!fp) return PFM_ERR_NOTSUPP;
+
+    ret = fscanf(fp, "%d", &type);
+    fclose(fp);
+
+    if (ret != 1) return PFM_ERR_NOTSUPP;
+
+    return type;
+}
 
 int pfm_riscv_get_perf_encoding(void *this, pfmlib_event_desc_t *e)
 {
@@ -35,9 +64,6 @@ int pfm_riscv_get_perf_encoding(void *this, pfmlib_event_desc_t *e)
     if (!pmu->get_event_encoding[PFM_OS_NONE])
         return PFM_ERR_NOTSUPP;
 
-    /*
-     * use generic raw encoding function first
-     */
     ret = pmu->get_event_encoding[PFM_OS_NONE](this, e);
     if (ret != PFM_SUCCESS)
         return ret;
@@ -48,12 +74,19 @@ int pfm_riscv_get_perf_encoding(void *this, pfmlib_event_desc_t *e)
         return PFM_ERR_NOTSUPP;
     }
 
-    attr->type = PERF_TYPE_RAW;
-    reg.val = e->codes[0];
+    if (pmu->perf_name) 
+    {
+        ret = find_pmu_type_by_name(pmu->perf_name);
+        if (ret < 0)
+            return ret;
+        attr->type = ret;
+    } 
+    else 
+        attr->type = PERF_TYPE_RAW;
 
+    reg.val = e->codes[0];
     attr->config = reg.val;
 
-    // risc-v can not set privilege levels
     attr->exclude_hv = 0;
     attr->exclude_kernel = 0;
     attr->exclude_user = 0;

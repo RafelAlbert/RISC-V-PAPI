@@ -21,6 +21,11 @@
  */
 
 /*
+ * Copyright (c) 2026 BSC
+ * Contributed by Rafel Albert Bros Esqueu <rafel.brosesqueu@bsc.es>
+*/
+
+/*
  * Copyright (c) 2009 Google, Inc
  * Contributed by Stephane Eranian <eranian@gmail.com>
  *
@@ -656,15 +661,20 @@ typedef enum {
 
 	PFM_PMU_INTEL_SPR,		/* Intel SapphireRapid */
 
-	PFM_PMU_RISCV_SIFIVE_U74, /* SiFive U74 */
-	PFM_PMU_RISCV_SIFIVE_P550, /* SiFive P550 */
-	PFM_PMU_RISCV_SOPHON_SG2042, /* Sophon SG2042 */
-	PFM_PMU_RISCV_EPI_EPAC_AVISPADO, /* EPI EPAC Avispado + VPU */
-	PFM_PMU_RISCV_EUPILOT_VEC_ATREVIDO, /* EUPILOT VEC Atrevido + VPU */
-	PFM_PMU_RISCV_SPACEMIT_K1_8, /* SpacemiT K1 8 */
-	PFM_PMU_RISCV_OPENHWGROUP_CVA6, /* OpenHardware Group CVA6 */
-  	PFM_PMU_RISCV_BSC_ZETTA_TC2, /* BSC BZL Zetta TC2 (Lagarto Ox) */
-  	PFM_PMU_RISCV_BSC_KOMODO, /* BSC Komodo (Lagarto Ox + VPU) */
+  /* RISC-V */
+	PFM_PMU_RISCV_SIFIVE_U74,           /* SiFive U74 */
+	PFM_PMU_RISCV_SIFIVE_P550,          /* SiFive P550 */
+	PFM_PMU_RISCV_SOPHON_SG2042,        /* Sophon SG2042 */
+	PFM_PMU_RISCV_EPI_EPAC_AVISPADO,    /* EPI EPAC Avispado+VPU */
+	PFM_PMU_RISCV_EUPILOT_VEC_ATREVIDO, /* EUPILOT VEC Atrevido+VPU */
+	PFM_PMU_RISCV_SPACEMIT_K1_8,        /* SpacemiT K1 8 */
+	PFM_PMU_RISCV_OPENHWGROUP_CVA6,     /* OpenHardware Group CVA6 */
+  PFM_PMU_RISCV_BSC_ZETTA_TC2,        /* BSC BZL Zetta TC2 (Lagarto Ox) */
+  PFM_PMU_RISCV_BSC_KOMODO,           /* BSC Komodo (Lagarto Ox + VPU) */
+	PFM_PMU_RISCV_EUPILOT_L2HN0,        /* EUPILOT L2 Cache Monitor 0 */
+	PFM_PMU_RISCV_EUPILOT_L2HN1,        /* EUPILOT L2 Cache Monitor 1 */
+	PFM_PMU_RISCV_EUPILOT_L2HN2,        /* EUPILOT L2 Cache Monitor 2 */
+	PFM_PMU_RISCV_EUPILOT_L2HN3,        /* EUPILOT L2 Cache Monitor 3 */
 	
 	PFM_PMU_POWER10,		/* IBM POWER10 */
 	PFM_PMU_AMD64_FAM19H_ZEN4,	/* AMD AMD64 Fam19h Zen4 */
