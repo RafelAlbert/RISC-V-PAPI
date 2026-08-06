@@ -675,6 +675,7 @@ typedef enum {
 	PFM_PMU_RISCV_EUPILOT_L2HN1,        /* EUPILOT L2 Cache Monitor 1 */
 	PFM_PMU_RISCV_EUPILOT_L2HN2,        /* EUPILOT L2 Cache Monitor 2 */
 	PFM_PMU_RISCV_EUPILOT_L2HN3,        /* EUPILOT L2 Cache Monitor 3 */
+	PFM_PMU_RISCV_SPACEMIT_K3,          /* SpacemiT K3 (X100 + A100) */
 	
 	PFM_PMU_POWER10,		/* IBM POWER10 */
 	PFM_PMU_AMD64_FAM19H_ZEN4,	/* AMD AMD64 Fam19h Zen4 */

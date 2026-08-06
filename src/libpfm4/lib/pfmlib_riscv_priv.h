@@ -48,6 +48,7 @@ typedef enum {
     OPENHWGROUP_CVA6,       // OpenHWGroup CVA6
     BSC_ZETTA_TC2,          // BSC BZL Zetta TC2 (Lagarto Ox)
     BSC_KOMODO,             // BSC Komodo (Lagarto Ox + VPU)
+    SPACEMIT_K3,            // SpacemiT K3 (X100 + A100)
 } pfm_riscv_implementation_t;
 
 typedef struct {
